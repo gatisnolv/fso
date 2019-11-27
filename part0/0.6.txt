@@ -1,0 +1,14 @@
+note over browser:
+Browser executes the event handler
+triggered by form submission
+
+A new note with the text, timestamp is created,
+added to notes array
+
+Notes list is redrawn
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa, request body in JSON: {content: "tables", date: "2019-11-27T19:48:06.238Z"}
+note over server:
+The Server adds the request body to notes array
+end note
+server-->browser: HTTP status 201: response body JSON: {"message":"note created"}
